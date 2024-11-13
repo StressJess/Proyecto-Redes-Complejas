@@ -141,7 +141,7 @@ Result_df = pd.DataFrame.from_dict(Result_dict, orient='index')
 # Para ayudar a seaborn
 ayudita = pd.melt(Result_df.reset_index(), id_vars=['index'], var_name='Centralidad', value_name='Value')
 
-# Create the plot
+# Crear la gráfica
 plt.figure(figsize=(8, 6)) 
 sns.barplot(x='index', y='Value', hue='Centralidad', data=ayudita, palette="hsv")
 plt.title('Centralidades de los Géneros')
